@@ -16,6 +16,10 @@
           --main-clr: hsla(0, 0%, 89%, 100%);
         }
       }
+      a:link { color: white; text-decoration: none;}
+      a:hover { text-decoration: underline; }
+      a:visited { color: white; }
+      
       body {
         margin: 0;
         background-color: var(--main-bg);
@@ -23,9 +27,22 @@
         font-family: 'Ubuntu', sans-serif;
       }
       header, main {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+      header h1 {margin: 1rem auto;}
+      .subtitle {
+        position: absolute;
+        top: 50%;
+        right: 0.25rem;
+        margin: .5rem;
+        transform: translateY(-50%);
+      }
+      main {
+        width: 95vw;
+        flex-direction: column;
       }
       .nlab-btn {
         margin: .5rem;
@@ -33,17 +50,37 @@
         border: 1px solid;
         border-radius: 0.25rem;
         min-width: 5rem;
-      }
 
+
+        margin: 0rem;
+        padding: 0.75rem 1.5rem;
+        border: 1px solid #39f;
+        border-radius: 5rem;
+        text-align: center;
+
+        box-shadow: inset 0 0 0px #39f0, 0 0 0px #39f0;
+        transition: box-shadow 200ms ease-in-out;
+      }
+      .nlab-btn:focus-visible,
+      .nlab-btn:hover {
+        box-shadow: inset 0 0 4px #39f, 0 0 4px #39f;
+        outline: 0px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+      }
+      li {margin: 0.5rem;}
     </style>
   </head>
   <body>
     <header>
-        <h1>nlab</h1>
+      <h1>nlab</h1>
+      <div class="subtitle">Welcome Master ;)</div>
     </header>
     <main>
-      <p>Welcome Master ;)</p>
-  
       <h2>map</h2>
       <ul>
         <li><a href="c/"><div class="nlab-btn">lab-c</div></a></li>
