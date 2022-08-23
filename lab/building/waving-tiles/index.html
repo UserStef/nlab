@@ -212,16 +212,37 @@
         }
 
     </style>
+    <link rel="stylesheet" href="../../../styles/settings.css">
+    <style>
+        /* Settings */
+        #toggleBorderRadius {display: none;}
+        #toggleBorderRadius:checked ~ .options .toggleCheckboxLabel[for="toggleBorderRadius"] {
+            color: var(--bwe);
+            --clr-outline: var(--bwc);
+            --bgc-before: #063;
+            --bgc-after: #0c6;
+            --ttx-after: 1rem;
+        }
+
+        #toggleAnimation:checked ~ main .list .row div {
+            animation-play-state: running;
+        }
+        #toggleBorderRadius:checked ~ main .list .row div {
+            border-radius: 50%;
+        }
+    </style>
     <link rel="stylesheet" href="../../../styles/end.css">
 </head>
 <body>
     <header>
-        <a href="../../../index.html" class="backLink hidden"><div class="backBtn">Back?</div></a>
+        <a href="../../index.html" class="backLink hidden"><div class="backBtn">Back?</div></a>
         <h1 class="title">Waving Tiles</h1>
         <!-- <div class="subtitle">subtitle</div> -->
         <!-- <div class="subtitle"> 🚧 Work in Progress...⏳ 🚧 </div> -->
         <!-- <div class="subtitle"> 🚧 Under Construction 🚧 </div> -->
     </header>
+    <input type="checkbox" name="toggle" id="toggleBorderRadius">
+    <input type="checkbox" name="toggle" id="toggleAnimation">
 
 <main>
     <div class="shelf">
@@ -248,6 +269,10 @@
     </div>
 </main>
 
+<div class="options">
+    <label for="toggleBorderRadius" class="toggleCheckboxLabel" data-toggle="BorderRadius">Border Radius</label>
+    <label for="toggleAnimation" class="toggleCheckboxLabel" data-toggle="Borders">Animation</label>
+</div>
 
     <footer>
         <div class="my-name">

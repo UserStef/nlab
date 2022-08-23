@@ -1,24 +1,55 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" onmousemove>
   <head>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="icon" href="https://raw.githubusercontent.com/UserStefDLT/WebResources/master/Images/icon_st.png">
     <title>nlab</title>
     <style>
-      li, li a {
-        padding: 1rem;
+      @import url('https://fonts.googleapis.com/css?family=Alegreya|Ubuntu|Satisfy&display=swap');
+      :root{
+        --main-bg: hsla(0, 0%, 97%, 100%);
+        --main-clr: hsla(210, 0%, 7%, 89%);
       }
+      @media (prefers-color-scheme: dark) {
+        :root{
+          --main-bg: hsla(210, 0%, 5%, 100%);
+          --main-clr: hsla(0, 0%, 89%, 100%);
+        }
+      }
+      body {
+        margin: 0;
+        background-color: var(--main-bg);
+        color: var(--main-clr);
+        font-family: 'Ubuntu', sans-serif;
+      }
+      header, main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .nlab-btn {
+        margin: .5rem;
+        padding: .5rem;
+        border: 1px solid;
+        border-radius: 0.25rem;
+        min-width: 5rem;
+      }
+
     </style>
   </head>
-  <header>
-      <h1>nlab</h1>
-  </header>
-  <main>
-    <p>Welcome Master ;)</p>
-
-    <h2>map</h2>
-    <ul>
-      <li><a href="c/window/">window</a></li>
-      <li><a href="c/path/">path</a></li>
-      <li><a href="draw/">draw</a></li>
-      <li><a href="lab/">lab</a></li>
-    </ul>
-  </main>
+  <body>
+    <header>
+        <h1>nlab</h1>
+    </header>
+    <main>
+      <p>Welcome Master ;)</p>
+  
+      <h2>map</h2>
+      <ul>
+        <li><a href="c/"><div class="nlab-btn">lab-c</div></a></li>
+        <li><a href="draw/"><div class="nlab-btn">draw</div></a></li>
+        <li><a href="lab/"><div class="nlab-btn">nyLab</div></a></li>
+      </ul>
+    </main>
+  </body>
 </html>
