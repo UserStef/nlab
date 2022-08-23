@@ -249,8 +249,8 @@
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             for (let index = 0; index < n; index++) {
                 // particles.push(new Ant(particles.length, s.w2, s.h2));
-                // particles.push(new Ant(particles.length, {x:s.w2, y:s.h2, energy:-1}));
-                particles.push(new Ant(particles.length));
+                particles.push(new Ant(particles.length, {x:s.w2, y:s.h2, energy: 50}));
+                // particles.push(new Ant(particles.length));
             }
         }
         function checkProximity(a,b){
@@ -295,8 +295,8 @@
             for (let index = 0; index < count; index++) {
                 // particles.push(new Particle());
                 // particles.push(new Ant(particles.length, s.w2, s.h2));
-                // particles.push(new Ant(particles.length, {x:s.w2, y:s.h2, energy:-1}));
-                particles.push(new Ant(particles.length));
+                particles.push(new Ant(particles.length, {x:s.w2, y:s.h2, energy: 50}));
+                // particles.push(new Ant(particles.length));
             }
         }
         // start();
