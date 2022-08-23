@@ -107,6 +107,7 @@ header > .title {
 
     transition: padding 300ms ease-in-out;
 }
+header > h1.title {margin: 0;}
 header > .subtitle {
     color: #fffa;
     padding: 0px 8px;
