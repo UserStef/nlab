@@ -997,8 +997,8 @@
         window.addEventListener('load', (ev) => {
             console.log(`Welcome to my Lab!`);
             WordTest();
-            AddEvents();
-            UpdateCustomVariables();
+            // AddEvents();
+            // UpdateCustomVariables();
 
             // let WordBreakBtn = document.getElementById('WordBreakBtn');
             // // WordBreakBtn.addEventListener('click', WordBreak);
@@ -1012,6 +1012,10 @@
             //     if(!resultView.open){resultView.open = true;}
             // });
             // // WordBreakBtn.addEventListener('touchend', WordBreak);
+
+            // WordTest();
+            let displayElement = document.getElementById('display');
+            displayElement.innerHTML = textUsedForTesting;
         });
         function WordTest(){
             let inputElement = document.getElementById('input');
@@ -1022,10 +1026,10 @@
             
             /* avg time for 1st chapter of 1st Nephi is 8ms. */
             
-            // console.time('v3');
+            // console.time('v2');
             let txtBox2 = WordStyle2(txt);
             displayElement.appendChild(txtBox2);
-            // console.timeEnd('v3');
+            // console.timeEnd('v2');
             
             let resultView = document.getElementById('result-view');
             if(!resultView.open){resultView.open = true;}

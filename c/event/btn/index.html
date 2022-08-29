@@ -490,6 +490,15 @@
 
 
     </style>
+    <style>
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    </style>
     <link rel="stylesheet" href="../../../styles/end.css">
 </head>
 <body>
@@ -629,10 +638,21 @@
             <!-- <div class="shelf-title">Input</div> -->
             <textarea name="input" id="input" cols="30" rows="10"></textarea>
             <!-- <button id="WordBreakBtn" class="submitBtn">Submit</button> -->
-            <button id="WordBreakBtn2" class="submitBtn" onclick="WordBreak()">onclick="WordBreak()"</button>
-            <button type="button" id="WordBreakBtn3" class="submitBtn">type="btn"</button>
-            <button id="WordBreakBtn4" class="submitBtn">addEvent: clic</button>
-            <button id="WordBreakBtn5" class="submitBtn">addEvent: touchend</button>
+            <div class="row">
+                <button id="WordBreakBtn2" class="submitBtn" onclick="WordBreak()">onclick="WordBreak()"</button>
+                <button type="button" id="WordBreakBtn3" class="submitBtn">type="btn"</button>
+                <button id="WordBreakBtn4" class="submitBtn">addEvent: clic</button>
+                <button id="WordBreakBtn5" class="submitBtn">addEvent: touchend</button>
+            </div>
+            <div class="row">
+                <div id="btn" class="submitBtn" onclick="btn()">btn</div>
+                <div id="w0" class="submitBtn" onclick="w0()">word 0</div>
+                <div id="w1" class="submitBtn" onclick="w1()">word 1</div>
+                <div id="w2" class="submitBtn" onclick="w2()">word 2</div>
+                <div id="w3" class="submitBtn" onclick="w3()">word 3</div>
+                <div id="w4" class="submitBtn" onclick="w4()">word 4</div>
+                <div id="w5" class="submitBtn" onclick="w5()">word 5</div>
+            </div>
         </div>
     </details>
     <details id="result-view" open>
@@ -657,6 +677,20 @@
     <div class="name-end">by St&eacute;fano.</div>
     <!-- <script src="main.js"></script> -->
     <script>
+        var textUsedForTesting = `1 Yo, Nefi, nací de buenos padres y recibí, por tanto, alguna instrucción en toda la ciencia de mi padre; y habiendo conocido muchas aflicciones durante el curso de mi vida, siendo, no obstante, altamente favorecido del Señor todos mis días; sí, habiendo logrado un conocimiento grande de la bondad y los misterios de Dios, escribo, por tanto, la historia de los hechos de mi vida.`;
+
+        function btn(){
+            let btn = document.getElementById('btn');
+            btn.innerHTML = "don't touch me.";
+        }
+
+        function w0(){let displayElement = document.getElementById('display'); displayElement.appendChild(WordStyle0(textUsedForTesting));}
+        function w1(){let displayElement = document.getElementById('display'); displayElement.appendChild(WordStyle1(textUsedForTesting));}
+        function w2(){let displayElement = document.getElementById('display'); displayElement.appendChild(WordStyle2(textUsedForTesting));}
+        function w3(){let displayElement = document.getElementById('display'); displayElement.appendChild(WordStyle3(textUsedForTesting));}
+        function w4(){let displayElement = document.getElementById('display'); displayElement.appendChild(WordStyle4(textUsedForTesting));}
+        function w5(){let displayElement = document.getElementById('display'); displayElement.appendChild(WordStyle5(textUsedForTesting));}
+
 
         function WordBreak(){
             let inputElement = document.getElementById('input');
@@ -671,7 +705,6 @@
             // let resultView = document.getElementById('result-view');
             // if(!resultView.open){resultView.open = true;}
         }
-
 
         function WordStyle5(txt){
             var box = document.createElement('div');
@@ -1034,7 +1067,7 @@
             let resultView = document.getElementById('result-view');
             if(!resultView.open){resultView.open = true;}
         }
-        var textUsedForTesting = `1 Yo, Nefi, nací de buenos padres y recibí, por tanto, alguna instrucción en toda la ciencia de mi padre; y habiendo conocido muchas aflicciones durante el curso de mi vida, siendo, no obstante, altamente favorecido del Señor todos mis días; sí, habiendo logrado un conocimiento grande de la bondad y los misterios de Dios, escribo, por tanto, la historia de los hechos de mi vida.`;
+        // var textUsedForTesting = `1 Yo, Nefi, nací de buenos padres y recibí, por tanto, alguna instrucción en toda la ciencia de mi padre; y habiendo conocido muchas aflicciones durante el curso de mi vida, siendo, no obstante, altamente favorecido del Señor todos mis días; sí, habiendo logrado un conocimiento grande de la bondad y los misterios de Dios, escribo, por tanto, la historia de los hechos de mi vida.`;
     </script>
 </body>
 </html>
