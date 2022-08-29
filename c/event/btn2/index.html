@@ -996,35 +996,7 @@
             //     });
             // });
         }
-        window.addEventListener('load', (ev) => {
-            console.log(`Welcome to my Lab!`);
-            WordTest();
-            // AddEvents();
-            // UpdateCustomVariables();
 
-            // let WordBreakBtn = document.getElementById('WordBreakBtn');
-            // // WordBreakBtn.addEventListener('click', WordBreak);
-            // WordBreakBtn.addEventListener('click', (ev)=>{
-            //     let inputElement = document.getElementById('input');
-            //     let txt = inputElement.value;
-            //     let displayElement = document.getElementById('display');
-            //     let txtBox2 = WordStyle2(txt);
-            //     displayElement.appendChild(txtBox2);
-            //     let resultView = document.getElementById('result-view');
-            //     if(!resultView.open){resultView.open = true;}
-            // });
-            // // WordBreakBtn.addEventListener('touchend', WordBreak);
-
-            // WordTest();
-            let displayElement = document.getElementById('display');
-            displayElement.innerHTML = textUsedForTesting;
-
-
-            let display2 = document.getElementById('display2');
-            display2.innerHTML = '#display2';
-            let display3 = document.getElementById('display3');
-            display3.innerHTML = '#display3';
-        });
         function WordTest(){
             let inputElement = document.getElementById('input');
             let txt = textUsedForTesting;
@@ -1064,6 +1036,38 @@
 18 Por lo tanto, quisiera que supieseis que después que el Señor hubo mostrado a mi padre Lehi tantas cosas maravillosas, sí, con respecto a la destrucción de Jerusalén, he aquí, mi padre salió entre el pueblo y empezó a profetizar y a declararles concerniente a lo que él había visto y oído.
 19 Y aconteció que los judíos se burlaron de él por las cosas que testificó de ellos, porque verdaderamente les testificó de sus maldades y abominaciones; y les dio testimonio de que las cosas que había visto y oído, así como las que había leído en el libro, manifestaban claramente la venida de un Mesías y también la redención del mundo.
 20 Y cuando los judíos oyeron esto, se irritaron contra él, sí, tal como contra los profetas de la antigüedad, a quienes habían echado fuera, y apedreado, y matado; y procuraron también quitarle la vida. Pero he aquí, yo, Nefi, os mostraré que las tiernas misericordias del Señor se extienden sobre todos aquellos que, a causa de su fe, él ha escogido, para hacerlos poderosos, sí, hasta tener el poder de librarse.`;
+        
+        window.addEventListener('load', (ev) => {
+            console.log(`Welcome to my Lab!`);
+            WordTest();
+            // AddEvents();
+            // UpdateCustomVariables();
+
+            // let WordBreakBtn = document.getElementById('WordBreakBtn');
+            // // WordBreakBtn.addEventListener('click', WordBreak);
+            // WordBreakBtn.addEventListener('click', (ev)=>{
+            //     let inputElement = document.getElementById('input');
+            //     let txt = inputElement.value;
+            //     let displayElement = document.getElementById('display');
+            //     let txtBox2 = WordStyle2(txt);
+            //     displayElement.appendChild(txtBox2);
+            //     let resultView = document.getElementById('result-view');
+            //     if(!resultView.open){resultView.open = true;}
+            // });
+            // // WordBreakBtn.addEventListener('touchend', WordBreak);
+
+            // WordTest();
+            let displayElement = document.getElementById('display');
+            displayElement.innerHTML = textUsedForTesting;
+
+
+            let display2 = document.getElementById('display2');
+            display2.innerHTML = '#display2';
+        });
+        
+        let display3 = document.getElementById('display3');
+        display3.innerHTML = '#display3';
+        WordTest();
     </script>
 </body>
 </html>
