@@ -643,12 +643,14 @@
         <summary>
             Result
             <!-- <div class="shelf-title">Result</div> -->
+            <div id="display2">hi2</div>
         </summary>
         <div class="shelf">
             <!-- <div class="shelf-title">Output</div> -->
-            <div id="display"></div>
+            <div id="display">hi</div>
         </div>
     </details>
+    <div id="display3">hi3</div>
 </main>
 
 
@@ -1016,6 +1018,12 @@
             // WordTest();
             let displayElement = document.getElementById('display');
             displayElement.innerHTML = textUsedForTesting;
+
+
+            let display2 = document.getElementById('display2');
+            display2.innerHTML = '#display2';
+            let display3 = document.getElementById('display3');
+            display3.innerHTML = '#display3';
         });
         function WordTest(){
             let inputElement = document.getElementById('input');
