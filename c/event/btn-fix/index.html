@@ -766,18 +766,47 @@
                     let half = Math.round(word.length/2);
                     logElement.innerHTML += `<p>[<span style="color: red;">i:${i}</span>] → half: ${half}</p>`;
                     i++;
-                    p2.push(`<span class="word"><span class="half" style="text-decoration: underline #06c;"><b style="color: #06c;">${word.at(0)}</b>${word.substring(1,half)}</span>${word.substring(half)}</span>`);
+
+                    // p2.push(`<span class="word"><span class="half" style="text-decoration: underline #06c;"><b style="color: #06c;">${word.at(0)}</b>${word.substring(1,half)}</span>${word.substring(half)}</span>`);
+                    p2.push(`<span class="word">`);
                     logElement.innerHTML += `<p>[<span style="color: red;">i:${i}</span>] → p2.length: ${p2.length}</p>`;
+                    i++;
+                    p2.push(`<span class="half" style="text-decoration: underline #06c;">`);
+                    logElement.innerHTML += `<p>[<span style="color: red;">i:${i}</span>] → p2.length: ${p2.length}</p>`;
+                    i++;
+                    p2.push(`<b style="color: #06c;">${word.at(0)}</b>`);
+                    logElement.innerHTML += `<p>[<span style="color: red;">i:${i}</span>] → p2.length: ${p2.length}</p>`;
+                    i++;
+                    p2.push(`${word.substring(1,half)}`);
+                    logElement.innerHTML += `<p>[<span style="color: red;">i:${i}</span>] → p2.length: ${p2.length}</p>`;
+                    i++;
+                    p2.push(`</span>${word.substring(half)}`);
+                    logElement.innerHTML += `<p>[<span style="color: red;">i:${i}</span>] → p2.length: ${p2.length}</p>`;
+                    i++;
+                    p2.push(`</span> `);
+                    logElement.innerHTML += `<p>[<span style="color: red;">i:${i}</span>] → p2.length: ${p2.length}</p>`;
+                    i++;
+
+                    // p2.push(`
+                    // <span class="word">
+                    //     <span class="half" style="text-decoration: underline #06c;">
+                    //         <b style="color: #06c;">${word.at(0)}</b>${word.substring(1,half)}
+                    //     </span>${word.substring(half)}
+                    // </span>`);
+                    // p2j = p2.join('');
+                    // logElement.innerHTML += `<p>[<span style="color: red;">i:${i}</span>] → p2.join(''): ${p2.join('')}</p>`;
+                    // logElement.innerText += p2.join('');
+                    logElement.innerHTML += `<p> ───── [<span style="color: red;">i:${i}</span>] → end of p2 word. ───── </p>`;
                     i++;
                 });
                 logElement.innerHTML += `<p>[<span style="color: red;">i:${i}</span>] → end of words.</p>`;
                 i++;
                 
                 p2.push(`<p>`);
-                logElement.innerHTML += `<p>[<span style="color: red;">i:${i}</span>] → p2.join(' '): ${p2.join(' ')}</p>`;
+                logElement.innerHTML += `<p>[<span style="color: red;">i:${i}</span>] → p2.join(''): ${p2.join('')}</p>`;
                 i++;
 
-                box.push(p2.join(' '));
+                box.push(p2.join(''));
                 logElement.innerHTML += `<p>[<span style="color: red;">i:${i}</span>] → box.length: ${box.length}</p>`;
                 i++;
 
