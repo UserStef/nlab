@@ -642,10 +642,11 @@
                 <div id="w0" class="submitBtn" onclick="w0()">word 0</div>
                 <div id="w1" class="submitBtn" onclick="w1()">word 1</div>
                 <div id="w2" class="submitBtn" onclick="w2()">word 2</div>
+                <div id="w3" class="submitBtn" onclick="w3()">word 3</div>
             </div>
         </div>
     </details>
-    <details id="result-view">
+    <details id="result-view" open>
         <summary>
             Result
             <!-- <div class="shelf-title">Result</div> -->
@@ -655,6 +656,10 @@
             <div id="display"></div>
         </div>
     </details>
+
+    <div class="shelf">
+        <pre id="log"></pre>
+    </div>
 </main>
 
 
@@ -725,6 +730,38 @@
             });
             box.push(`</div>`);
 
+            let displayElement = document.getElementById('display');
+            displayElement.innerHTML = box.join('');
+        }
+
+        function w3(){
+            let inputElement = document.getElementById('input');
+            let txt = inputElement.value;
+            
+            
+            let logElement = document.getElementById('log');
+            logElement.innerHTML += `<p>${txt}</p>`;
+
+            var box = [`<div class="box">`];
+            logElement.innerHTML += `<p>${box[0]}</p>`;
+            let paragraphs = txt.split(/\n+/gi);
+
+            paragraphs.forEach(p=>{
+                let p2 = [`<p class="para">`];
+                let words = p.split(' ');
+                logElement.innerHTML += `<p>${words}</p>`;
+                words.forEach(word=>{
+                    let half = Math.round(word.length/2);
+                    logElement.innerHTML += `<p>${half}</p>`;
+                    p2.push(`<span class="word"><span class="half" style="text-decoration: underline #06c;"><b style="color: #06c;">${word.at(0)}</b>${word.substring(1,half)}</span>${word.substring(half)}</span>`);
+                });
+                p2.push(`<p>`);
+                box.push(p2.join(' '));
+                logElement.innerHTML += `<p>${p2.join(' ')}</p>`;
+            });
+            box.push(`</div>`);
+            
+            logElement.innerHTML += `<p>${box.join('')}</p>`;
             let displayElement = document.getElementById('display');
             displayElement.innerHTML = box.join('');
         }
