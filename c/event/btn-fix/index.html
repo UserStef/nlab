@@ -45,6 +45,7 @@
             color: #06c;
             font-weight: bold;
         } */
+
         .submitBtn {
             font-size: 16px;
             margin: .25rem .5rem;
@@ -70,6 +71,45 @@
             box-shadow: 0 0 .5em #39f9;
             box-shadow: 0 0 .5em .25em #39f9;
         }
+        .debugBtn {
+            font-size: 16px;
+            margin: .25rem .5rem;
+            padding: .25rem .5rem;
+            border-radius: .25rem;
+
+            padding: .5em 1em;
+            border-radius: .5rem;
+            
+            border: 0;
+            color: #fff;
+            text-shadow: 1px 1px 1px #1119;
+            background-image: linear-gradient(to bottom, #f93, #c60);
+            background-image: linear-gradient(to bottom, #ccc, #666);
+
+            cursor: pointer;
+
+            box-shadow: 0 0 0em 0em #39f0;
+            /* box-shadow: 0 0 0em #39f0; */
+            transition: box-shadow 200ms ease-in-out;
+        }
+        .debugBtn:hover {
+            /* box-shadow: 0 0 .25em .25em #39f9; */
+            box-shadow: 0 0 .5em #f939;
+            box-shadow: 0 0 .5em .25em #f939;
+        }
+
+        #input-view .row,
+        #input-view .col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-sizing: border-box;
+            border: 0;
+        }
+        #input-view .row {flex-direction: row;}
+        #input-view .col {flex-direction: column;}
+        
     </style>
     <style>
         :root {
@@ -495,8 +535,8 @@
 <body>
     <header>
         <a href="../../index.html" class="backLink"><div class="backBtn">Back?</div></a>
-        <div class="title">btn text</div>
-        <!-- <div class="subtitle">subtitle</div> -->
+        <div class="title">Text Style</div>
+        <div class="subtitle">Debug</div>
         <!-- <div class="subtitle"> 🚧 Work in Progress...⏳ 🚧 </div> -->
         <!-- <div class="subtitle"> 🚧 Under Construction 🚧 </div> -->
     </header>
@@ -631,18 +671,13 @@
             Input
             <!-- <div class="shelf-title">Input</div> -->
         </summary>
-        <div class="shelf">
-            <!-- <div class="shelf-title">Input</div> -->
-            <textarea name="input" id="input" cols="30" rows="10"></textarea>
-            <!-- <button id="WordBreakBtn" class="submitBtn">Submit</button> -->
-            <!-- <button type="button" id="WordBreakBtn" class="submitBtn">Submit</button> -->
-            <button type="button" id="WordBreakBtn" class="submitBtn" onclick="WordBreak()">Submit</button>
-
+        <div id="input-view" class="shelf">
             <div class="row">
-                <div id="w0" class="submitBtn" onclick="w0()">word 0</div>
-                <!-- <div id="w1" class="submitBtn" onclick="w1()">word 1</div> -->
-                <!-- <div id="w2" class="submitBtn" onclick="w2()">word 2</div> -->
-                <div id="w3" class="submitBtn" onclick="w3()">word 3 d</div>
+                <textarea name="input" id="input" cols="30" rows="10"></textarea>
+                <div class="col">
+                    <button type="button" id="WordBreakBtn" class="submitBtn" onclick="WordBreak()">Submit</button>
+                    <div id="WordDebugBtn" class="debugBtn" onclick="WordDebug()">Word Debug</div>
+                </div>
             </div>
         </div>
     </details>
@@ -657,9 +692,14 @@
         </div>
     </details>
 
-    <div class="shelf">
-        <pre id="log"></pre>
-    </div>
+    <details>
+        <summary>
+            Debug
+        </summary>
+        <div class="shelf">
+            <pre id="log"></pre>
+        </div>
+    </details>
 </main>
 
 
@@ -734,7 +774,7 @@
             displayElement.innerHTML = box.join('');
         }
 
-        function w3(){
+        function WordDebug(){
             let i = 0;
             let logElement = document.getElementById('log');
             logElement.innerHTML += `<p>[<span style="color: red;">i:${i}</span>] → Start of log.</p>`;
@@ -1226,10 +1266,10 @@
 19 Y aconteció que los judíos se burlaron de él por las cosas que testificó de ellos, porque verdaderamente les testificó de sus maldades y abominaciones; y les dio testimonio de que las cosas que había visto y oído, así como las que había leído en el libro, manifestaban claramente la venida de un Mesías y también la redención del mundo.
 20 Y cuando los judíos oyeron esto, se irritaron contra él, sí, tal como contra los profetas de la antigüedad, a quienes habían echado fuera, y apedreado, y matado; y procuraron también quitarle la vida. Pero he aquí, yo, Nefi, os mostraré que las tiernas misericordias del Señor se extienden sobre todos aquellos que, a causa de su fe, él ha escogido, para hacerlos poderosos, sí, hasta tener el poder de librarse.`;
         
-        AddEvents();
-        UpdateCustomVariables();
         window.addEventListener('load', (ev) => {
             console.log(`Welcome to my Lab!`);
+            AddEvents();
+            UpdateCustomVariables();
         });
     </script>
 </body>
